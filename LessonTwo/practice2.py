@@ -10,3 +10,6 @@ print("".join([partition_var2[0],"don't ", partition_var1[1],partition_var2[2], 
 quantity_cats= new1_cats.casefold().count("cats")
 quantity_dogs=new1_dogs.casefold().count("dogs")
 print(f"Word dogs exist in this two sentences: {quantity_dogs} times. Word cats exist in this two sentences: {quantity_cats}" )
+lower_var = (dogs + cats).lower()
+print (lower_var.count ("dogs"))
+print (lower_var.count ("cats"))
