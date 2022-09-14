@@ -9,7 +9,7 @@ else:
 phone_number = input ("Enter your phone number: ")
 if len(phone_number) != 10:
     print("Invalid length of numbers please try again")
-elif not (phone_number.isnumeric()):
+elif not (phone_number.isdigit()):
     print ("Invalid format, please try again")
 else:
     print ("Your number is valid")
