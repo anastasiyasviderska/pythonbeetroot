@@ -1,11 +1,14 @@
 from datetime import datetime, timedelta
 
-expected_datetime = datetime.now() + timedelta(seconds=10)
+current_time = datetime.now()
 
-while True:
-    if datetime.now() > expected_datetime:
-        print('test')
-        expected_datetime = datetime.now() + timedelta(seconds=10)
+timer = current_time + timedelta(seconds=10)
+
+for x in range (10):
+    while timer > datetime.now():
+        pass
+    print("It's time!")
+    timer = datetime.now() + timedelta(seconds=10)
 
 
 
