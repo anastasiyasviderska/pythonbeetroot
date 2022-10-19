@@ -34,11 +34,9 @@ class Student(Person):
         return super().__str__() + str(self.average_rank_all_subjects())
 
 teacher_1 = Teacher('John', 'Smith', 50, 'male', 40, 45.5)
-print(teacher_1)
 assert(str(teacher_1) == 'John Smith 50 male 1820.0')
 
 student_1 = Student('Alex', 'Bush', 20, 'male', [4, 3, 2, 1, 1, 1])
-print(student_1)
 assert(str(student_1) == 'Alex Bush 20 male 2.0') 
 
 
