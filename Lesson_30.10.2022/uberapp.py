@@ -1,4 +1,4 @@
-from email.policy import default
+
 from basic_user import BasicUser
 from anonim_user import AnonimUser
 from uber_server import Server
