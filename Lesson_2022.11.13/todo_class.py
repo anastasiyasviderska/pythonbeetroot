@@ -58,11 +58,14 @@ class ToDo:
         return False
 
     def __str__(self):
-        return f"Status: {self.status}\n" \
-               f"Description: {self.description}\n" \
+        return f"Status: {self.status}   " \
+               f"Description: {self.description}   " \
                f"Due date: {self.due_date.strftime('%Y/%m/%d %H:%M')}."
 
-
+    def __repr__(self) -> str:
+        return f"Status: {self.status}   " \
+               f"Description: {self.description}   " \
+               f"Due date: {self.due_date.strftime('%Y/%m/%d %H:%M')}."
 
 
     
