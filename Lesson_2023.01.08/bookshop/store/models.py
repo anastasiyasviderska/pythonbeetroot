@@ -9,8 +9,8 @@ class Book(models.Model):
         return self.name
 
 class Rating(models.Model):
-    item = models.ForeignKey(Book, on_delete=models.CASCADE)
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user_rating = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.item
+        return self.book

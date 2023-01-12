@@ -10,8 +10,11 @@ def index(request):
 def add_random_rating(request, book_id):
     random_vote = randint(1, 5)
     book = Book.objects.get(pk=book_id)
-    # q.choice_set.create(choice_text='Not much', votes=0)
+    book.rating_set.create(user_rating=random_vote)
     return HttpResponse(f"You're added rating {'★'*random_vote}{'☆'*(5-random_vote)} for {book}")
 
 def results(request, book_id):
-    return HttpResponse(f"You're looking at the results of item {book_id}")
+    book = Book.objects.get(pk=book_id)
+    ratings = list(book.rating_set.all())
+    ratings_star = map(lambda x: f"{'★'*x.user_rating}{'☆'*(5-x.user_rating)}", ratings) 
+    return HttpResponse(f'You\'re looking at the results of item {book}: {", ".join(ratings_star)}')
